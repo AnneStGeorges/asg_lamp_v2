@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EventController!{% endblock %}
+
+{% block body %}
+    <ul>
+{%  for event in events %}
+        <li>{{ event.name }} le {{ event.date|date('d/m/Y') }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
